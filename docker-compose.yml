@@ -12,4 +12,4 @@ services:
     ports:
       - 8080:8080
       - 5005:5005
-    command: bash -c "mvn clean install && java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005 -jar target/app.labone.jar"
+    command: bash -c "mvn clean install && java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005 -jar target/application.jar"

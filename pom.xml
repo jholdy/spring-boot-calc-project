@@ -49,6 +49,6 @@
                 </configuration>
             </plugin>
         </plugins>
-        <finalName>app.labone</finalName>
+        <finalName>application</finalName>
     </build>
 </project>
