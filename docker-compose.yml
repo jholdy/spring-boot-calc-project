@@ -1,0 +1,15 @@
+version: '3.4'
+services:
+  api:
+    image: maven:3.6.3-jdk-14
+    restart: always
+    working_dir: /home/project
+    environment:
+      TZ: America/Sao_Paulo
+    volumes:
+      - ./:/home/project
+      - /home/jholdy/.m2/repository:/root/.m2
+    ports:
+      - 8080:8080
+      - 5005:5005
+    command: bash -c "mvn clean install && java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005 -jar target/app.labone.jar"
